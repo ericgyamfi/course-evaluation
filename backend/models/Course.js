@@ -1,19 +1,19 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const studentSchema = new Schema({
-  studentID: {
+const courseSchema = new Schema({
+  courseCode: {
     type: String,
     required: true
   },
-  email: {
+  courseTitle: {
     type: String,
     required: true
   },
-  studentPin: {
+  lecturer: {
     type: String,
     required: true
   }
 });
 
-module.exports = mongoose.model('Student', studentSchema);
+module.exports = mongoose.model('Course', courseSchema);
