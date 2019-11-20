@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "backend-course-evaluation",
   "version": "1.0.0",
   "description": "student evaluation application",
   "main": "index.js",
