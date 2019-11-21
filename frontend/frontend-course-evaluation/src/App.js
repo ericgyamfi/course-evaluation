@@ -1,8 +1,16 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import Home from './containers/Home';
 
 function App() {
-  return <div className='App'></div>;
+  return (
+    <BrowserRouter>
+      <div className='App'>
+        <Home />
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
