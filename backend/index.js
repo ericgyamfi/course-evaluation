@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const authRoutes = require('./routes/auth');
+const evaluationRoutes = require('./routes/evaluation');
 
 const app = express();
 const port = 5000;
@@ -9,6 +10,19 @@ const port = 5000;
 app.use(express.json());
 
 app.use(authRoutes);
+app.use(evaluationRoutes);
+
+// create a fake course for testing
+// const Course = require('./models/Course');
+// Course.create({
+//   courseCode: 'CSCD231',
+//   courseTitle: 'Introduction to Material Science',
+//   lecturer: 'James Ecklu'
+// })
+//   .then(result => {
+//     console.log('course created successfully');
+//   })
+//   .catch(err => console.log(err));
 
 // setting headers using cors
 app.use((req, res, next) => {

@@ -1,5 +1,10 @@
-const router = require('../routes/evaluation');
-const {getCourses, getCourseEvaluation, postCourseEvaluation} = require('../controllers/evalutation');
+const router = require('express').Router();
+const {
+  getCourses,
+  getCourseEvaluation,
+  postCourseEvaluation
+} = require('../controllers/evalutation');
 
+router.get('/courses', getCourses);
 
-module.exports =  router;
+module.exports = router;

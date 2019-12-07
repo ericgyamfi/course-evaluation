@@ -5,7 +5,6 @@ const courseEvaluationSchema = new Schema({
   courseCode: {
     type: String,
     required: true,
-    ref: 'Course'
   },
   studenId: {
     type: String,

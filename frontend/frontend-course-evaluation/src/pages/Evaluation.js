@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+import axios from 'axios';
+
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Container } from '@material-ui/core';
 
-import CourseCard from '../components/CourseCard';
+import CourseCard from '../components/CourseCard/CourseCard';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -18,11 +21,17 @@ const useStyles = makeStyles(theme => ({
 function Evaluation() {
   const classes = useStyles();
 
-  const [courseState] = useState({
+  const [courseState, setCourseState] = useState({
     courseTitle: '',
     courseCode: '',
     courseDescription: '',
     numOfCourse: 5
+  });
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/courses').then(courses => {
+      console.log(courses);
+    });
   });
 
   return (

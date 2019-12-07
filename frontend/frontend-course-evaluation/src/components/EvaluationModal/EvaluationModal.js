@@ -47,9 +47,7 @@ export default function ScrollDialog() {
             ref={descriptionElementRef}
             tabIndex={-1}
           >
-            // Display course title
-
-            // Create form for the questions
+            Display course title Create form for the questions
           </DialogContentText>
         </DialogContent>
         <DialogActions>
